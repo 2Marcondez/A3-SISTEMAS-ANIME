@@ -42,9 +42,9 @@
         <section>
             <h2 class="current-season">Temporada Atual</h2>
             <div class="carousel-container">
-                <button class="carousel-arrow left" onclick="scrollCarousel('current-season', -1)">&lt;</button>
+                <button class="carousel-arrow left" onclick="scrollCarousel('current-season', -1)">⟨</button>
                 <div class="carousel" id="current-season"></div>
-                <button class="carousel-arrow right" onclick="scrollCarousel('current-season', 1)">&gt;</button>
+                <button class="carousel-arrow right" onclick="scrollCarousel('current-season', 1)">⟩</button>
             </div>
         </section>
     
@@ -52,9 +52,9 @@
         <section>
             <h2 class="launching-today">Lançando Hoje</h2>
             <div class="carousel-container">
-                <button class="carousel-arrow left" onclick="scrollCarousel('launching-today', -1)">&lt;</button>
+                <button class="carousel-arrow left" onclick="scrollCarousel('current-season', -1)">⟨</button>
                 <div class="carousel" id="launching-today"></div>
-                <button class="carousel-arrow right" onclick="scrollCarousel('launching-today', 1)">&gt;</button>
+                <button class="carousel-arrow right" onclick="scrollCarousel('current-season', 1)">⟩</button>
             </div>
         </section>
     
@@ -62,9 +62,9 @@
         <section>
             <h2 class="launched-yesterday">Lançados Ontem</h2>
             <div class="carousel-container">
-                <button class="carousel-arrow left" onclick="scrollCarousel('launched-yesterday', -1)">&lt;</button>
+                <button class="carousel-arrow left" onclick="scrollCarousel('current-season', -1)">⟨</button>
                 <div class="carousel" id="launched-yesterday"></div>
-                <button class="carousel-arrow right" onclick="scrollCarousel('launched-yesterday', 1)">&gt;</button>
+                <button class="carousel-arrow right" onclick="scrollCarousel('current-season', 1)">⟩</button>
             </div>
         </section>
     
@@ -72,9 +72,9 @@
         <section>
             <h2 class="launching-tomorrow">Lançando Amanhã</h2>
             <div class="carousel-container">
-                <button class="carousel-arrow left" onclick="scrollCarousel('launching-tomorrow', -1)">&lt;</button>
+                <button class="carousel-arrow left" onclick="scrollCarousel('current-season', -1)">⟨</button>
                 <div class="carousel" id="launching-tomorrow"></div>
-                <button class="carousel-arrow right" onclick="scrollCarousel('launching-tomorrow', 1)">&gt;</button>
+                <button class="carousel-arrow right" onclick="scrollCarousel('current-season', 1)">⟩</button>
             </div>
 
         </section>
@@ -109,6 +109,8 @@
 
 </html>
 
+
+
 <script>
     function redirectToSearchPage() {
         const searchInput = document.getElementById('home-search-input').value.trim();
@@ -121,5 +123,13 @@
         }
     }
     
+
+    function scrollCarousel(id, direction) {
+    const carousel = document.getElementById(id);
+    const scrollAmount = 1200; // A quantidade de pixels que o carrossel vai rolar por vez 800 = 3 cards
+
+    // Aqui move o carrosel pra um lado ou pro outro
+    carousel.scrollLeft += direction * scrollAmount;
+}
 
 </script>
