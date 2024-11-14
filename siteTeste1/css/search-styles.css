@@ -123,6 +123,8 @@ body {
     color: #AAAAAA;
 }
 
+/* nUMEROS LA EM BAIXO */
+
 .pagination {
     display: flex;
     justify-content: center;
@@ -130,6 +132,8 @@ body {
     gap: 10px;
     margin-top: 20px;
 }
+
+
 
 .pagination button {
     background-color: #FF4500;
